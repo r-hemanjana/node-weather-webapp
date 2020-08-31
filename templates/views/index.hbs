@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>  
+
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/web.png">
+        <link rel="stylesheet" href="/css/style.css">
+        {{!-- <script src="js/app.js"></script>    becoz script is loading before the html is got rendered so it has to be placed bottom--}}
+    </head>
+    <body>
+        <!--header.hbs adding...-->
+        <div class="min-content">
+             {{>header}} 
+             <p>he you using node app</p>
+
+             <form>
+                 <input placeholder="Location">
+                 <button>Search</button>
+             </form>
+
+             <p id="msg_1"></p>
+             <p id="msg_2"></p>
+        </div>
+      
+        
+        {{>footer}}
+
+         <script src="js/app.js"></script>
+    </body>
+</html>
+<!-- can delete index.html now -->
