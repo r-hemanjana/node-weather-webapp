@@ -13,7 +13,7 @@ console.log('client side javascript loaded!')
 
 //integrate client side js with html
 const weatherform = document.querySelector('form')
-const search = document.querySelector('input')
+const search = document.querySelector('input')    
 const messageone = document.querySelector('#msg_1')
 const messagetwo = document.querySelector('#msg_2')
  
@@ -25,7 +25,7 @@ weatherform.addEventListener('submit',(e)=>{
     messageone.textContent = 'loading...'
     messageone.textContent = ''
 
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             console.log(data.error)

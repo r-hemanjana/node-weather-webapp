@@ -10,6 +10,8 @@ console.log(path.join(__dirname, '../public')) //joins both content of __dirnaam
  //to create a new express application we call express()
 const app = express()
 
+const port = process.env.PORT || 3000
+
 // app.com - root route
 
 // app.com/help - /help route
@@ -124,7 +126,7 @@ app.get('*', (req, res)=>{// * match anything which isnt listed up above
 
 
 //to start server and to make it listen on specific port
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     //on port 3000 
-    console.log('server is up on 3000')
+    console.log('server is up on'+port)
 })
