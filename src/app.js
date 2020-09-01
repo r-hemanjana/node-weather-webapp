@@ -89,7 +89,7 @@ app.get('/about',(req, res)=>{
 // this called as route handler
 app.get('', (req, res)=>{
     res.render('index',{
-        title:'waether',
+        title:'weather',
         name:'hemu'
     }) // we can render one of our views/handlebar template
 })
